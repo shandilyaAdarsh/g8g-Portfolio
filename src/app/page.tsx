@@ -12,15 +12,28 @@ import { FaqSection } from '@/components/home/FaqSection'
 import { ClosingCTA } from '@/components/sections/ClosingCTA'
 import { WavyDivider } from '@/components/common/WavyDivider'
 import { StickyMobileCTA } from '@/components/common/StickyMobileCTA'
-import { getOrganizationSchema, getWebsiteSchema } from '@/lib/structuredData'
+import {
+  getOrganizationSchema,
+  getWebsiteSchema,
+  getFaqSchema,
+  getProductionProcessSchema,
+} from '@/lib/structuredData'
+import { HOMEPAGE_FAQS } from '@/data/homepageFaqs'
 import { getProjects } from '@/sanity/service'
 
 export const metadata: Metadata = {
-  title: 'G8G Media | Video Production & Creative Content',
+  title: 'G8G Media | 3D Motion, Commercial Films & Product Video Studio',
   description:
-    'G8G Media creates product films, 3D animations, and commercials that turn complex stories into scroll-stopping video content.',
+    'G8G Media creates product films, 3D animations, and cinema commercials that turn complex stories into scroll-stopping video content. Standard 3 to 5 week delivery.',
   alternates: {
     canonical: 'https://g8g.media/',
+  },
+  openGraph: {
+    title: 'G8G Media | 3D Motion, Commercial Films & Product Video Studio',
+    description:
+      'G8G Media creates product films, 3D animations, and cinema commercials that turn complex stories into scroll-stopping video content.',
+    url: 'https://g8g.media/',
+    images: ['/g8g-media-logo.png'],
   },
 }
 
@@ -30,13 +43,17 @@ export default async function HomePage() {
 
   const orgSchema = getOrganizationSchema(origin)
   const webSchema = getWebsiteSchema(origin)
+  const faqSchema = getFaqSchema(HOMEPAGE_FAQS, origin)
+  const processSchema = getProductionProcessSchema(origin)
 
   return (
     <main id="main-content" className="bg-white min-h-screen">
-      {/* JSON-LD Structured Data */}
+      {/* JSON-LD Structured Data (SEO + AEO + GEO) */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([orgSchema, webSchema]) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([orgSchema, webSchema, faqSchema, processSchema]),
+        }}
       />
 
       {/* 1. HERO — Your Video Production Partner /// with rotating animation */}

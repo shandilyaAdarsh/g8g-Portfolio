@@ -41,8 +41,8 @@ Thumbs.db
 top_portion.png
 
 # Client Inquiries & Spreadsheets (Confidential Client Data)
-data/
-data/inquiries.xlsx
-data/inquiries.csv
-data/*.xlsx
-data/*.csv
+/data/
+/data/inquiries.xlsx
+/data/inquiries.csv
+/data/*.xlsx
+/data/*.csv

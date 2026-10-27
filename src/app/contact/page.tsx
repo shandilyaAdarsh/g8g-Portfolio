@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { PageContainer } from '@/components/layout/PageContainer'
 import { Eyebrow } from '@/components/ui/Eyebrow'
 import { ContactForm } from '@/components/contact/ContactForm'
-import { getBreadcrumbSchema } from '@/lib/structuredData'
+import { getBreadcrumbSchema, getContactPageSchema } from '@/lib/structuredData'
 import { WavyDivider } from '@/components/common/WavyDivider'
 import { BackgroundLogoWatermark } from '@/components/common/BackgroundLogoWatermark'
 import { Mail, Shield, Clock, Lock } from 'lucide-react'
@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const origin = 'https://g8g.media'
+  const contactPageSchema = getContactPageSchema(origin)
   const breadcrumbs = getBreadcrumbSchema(
     [
       { name: 'Home', path: '/' },
@@ -35,10 +36,10 @@ export default function ContactPage() {
 
   return (
     <main id="main-content" className="pt-20">
-      {/* JSON-LD Structured Data */}
+      {/* JSON-LD Structured Data (SEO + GEO Contact Point) */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([contactPageSchema, breadcrumbs]) }}
       />
 
       <section className="py-20 md:py-28 relative overflow-hidden">

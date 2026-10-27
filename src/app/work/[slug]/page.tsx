@@ -9,7 +9,7 @@ import { NextProject } from '@/components/portfolio/NextProject'
 import { ClosingCTA } from '@/components/sections/ClosingCTA'
 import { WavyDivider } from '@/components/common/WavyDivider'
 import { getProjectBySlug, getProjects } from '@/sanity/service'
-import { getCaseStudySchema, getBreadcrumbSchema } from '@/lib/structuredData'
+import { getCaseStudySchema, getVideoObjectSchema, getBreadcrumbSchema } from '@/lib/structuredData'
 import { CheckCircle2, ShieldCheck } from 'lucide-react'
 
 interface PageProps {
@@ -33,16 +33,41 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  const origin = 'https://g8g.media'
+  const ogImage = project.thumbnail || '/g8g-media-logo.png'
+
   return {
     title: `${project.title} | Case Study | G8G Media`,
     description: project.description,
+    keywords: [
+      project.categoryLabel,
+      project.title,
+      'G8G Media Case Study',
+      ...project.deliverables,
+      ...project.technologies,
+    ],
     alternates: {
-      canonical: `https://g8g.media/work/${project.slug}`,
+      canonical: `${origin}/work/${project.slug}`,
     },
     openGraph: {
+      type: 'video.other',
       title: `${project.title} | Case Study | G8G Media`,
       description: project.description,
-      url: `https://g8g.media/work/${project.slug}`,
+      url: `${origin}/work/${project.slug}`,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} | Case Study | G8G Media`,
+      description: project.description,
+      images: [ogImage],
     },
   }
 }
@@ -63,6 +88,7 @@ export default async function ProjectCaseStudyPage({ params }: PageProps) {
     allProjects[0]
 
   const caseStudySchema = getCaseStudySchema(project, origin)
+  const videoObjectSchema = getVideoObjectSchema(project, origin)
   const breadcrumbSchema = getBreadcrumbSchema(
     [
       { name: 'Home', path: '/' },
@@ -74,11 +100,11 @@ export default async function ProjectCaseStudyPage({ params }: PageProps) {
 
   return (
     <main id="main-content" className="bg-white">
-      {/* JSON-LD Structured Data */}
+      {/* JSON-LD Structured Data (SEO + AEO Video Carousel) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([caseStudySchema, breadcrumbSchema]),
+          __html: JSON.stringify([caseStudySchema, videoObjectSchema, breadcrumbSchema]),
         }}
       />
 

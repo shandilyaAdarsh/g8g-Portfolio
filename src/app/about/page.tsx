@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { ClosingCTA } from '@/components/sections/ClosingCTA'
 import { WavyDivider } from '@/components/common/WavyDivider'
 import { BackgroundLogoWatermark } from '@/components/common/BackgroundLogoWatermark'
-import { getBreadcrumbSchema } from '@/lib/structuredData'
+import { getOrganizationSchema, getBreadcrumbSchema } from '@/lib/structuredData'
 import { ArrowUpRight, Compass, Layers, ShieldCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -27,6 +27,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   const origin = 'https://g8g.media'
+  const orgSchema = getOrganizationSchema(origin)
   const breadcrumbs = getBreadcrumbSchema(
     [
       { name: 'Home', path: '/' },
@@ -37,10 +38,10 @@ export default function AboutPage() {
 
   return (
     <main id="main-content" className="pt-20 bg-white">
-      {/* JSON-LD Structured Data */}
+      {/* JSON-LD Structured Data (SEO + GEO Entity Architecture) */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([orgSchema, breadcrumbs]) }}
       />
 
       {/* Editorial Header */}

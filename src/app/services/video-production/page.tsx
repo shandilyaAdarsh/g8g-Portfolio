@@ -8,8 +8,13 @@ import { ServiceFAQ } from '@/components/services/ServiceFAQ'
 import { ClosingCTA } from '@/components/sections/ClosingCTA'
 import { WavyDivider } from '@/components/common/WavyDivider'
 import { BackgroundLogoWatermark } from '@/components/common/BackgroundLogoWatermark'
-import { mediaServices, productionFormats, processSteps } from '@/data/mediaServices'
-import { getVideoProductionServiceSchema, getBreadcrumbSchema } from '@/lib/structuredData'
+import { mediaServices, productionFormats, processSteps, serviceFAQs } from '@/data/mediaServices'
+import {
+  getVideoProductionServiceSchema,
+  getBreadcrumbSchema,
+  getFaqSchema,
+  getProductionProcessSchema,
+} from '@/lib/structuredData'
 import {
   ArrowUpRight,
   Film,
@@ -42,6 +47,8 @@ export const metadata: Metadata = {
 export default function VideoProductionPage() {
   const origin = 'https://g8g.media'
   const serviceSchema = getVideoProductionServiceSchema(origin)
+  const faqSchema = getFaqSchema(serviceFAQs, origin)
+  const processSchema = getProductionProcessSchema(origin)
   const breadcrumbSchema = getBreadcrumbSchema(
     [
       { name: 'Home', path: '/' },
@@ -53,11 +60,11 @@ export default function VideoProductionPage() {
 
   return (
     <main id="main-content" className="pt-20 bg-white">
-      {/* JSON-LD Structured Data */}
+      {/* JSON-LD Structured Data (SEO + AEO + GEO) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([serviceSchema, breadcrumbSchema]),
+          __html: JSON.stringify([serviceSchema, faqSchema, processSchema, breadcrumbSchema]),
         }}
       />
 

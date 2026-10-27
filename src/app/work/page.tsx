@@ -7,7 +7,7 @@ import { ClosingCTA } from '@/components/sections/ClosingCTA'
 import { WavyDivider } from '@/components/common/WavyDivider'
 import { BackgroundLogoWatermark } from '@/components/common/BackgroundLogoWatermark'
 import { getProjects } from '@/sanity/service'
-import { getBreadcrumbSchema } from '@/lib/structuredData'
+import { getBreadcrumbSchema, getPortfolioCollectionSchema } from '@/lib/structuredData'
 
 export const metadata: Metadata = {
   title: 'Selected Creative Work | G8G Media',
@@ -28,6 +28,7 @@ export default async function WorkPage() {
   const origin = 'https://g8g.media'
   const projects = await getProjects()
 
+  const portfolioSchema = getPortfolioCollectionSchema(projects, origin)
   const breadcrumbs = getBreadcrumbSchema(
     [
       { name: 'Home', path: '/' },
@@ -38,10 +39,10 @@ export default async function WorkPage() {
 
   return (
     <main id="main-content" className="pt-20 bg-white">
-      {/* JSON-LD Structured Data */}
+      {/* JSON-LD Structured Data (SEO + AEO Work Collection) */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([portfolioSchema, breadcrumbs]) }}
       />
 
       {/* ── A. PORTFOLIO HERO ─────────────────────────────────── */}

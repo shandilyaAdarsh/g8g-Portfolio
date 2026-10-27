@@ -1,12 +1,53 @@
 # G8G Media Robots Configuration
 # https://g8g.media
 
+# General Search Engine Crawlers
 User-agent: *
 Allow: /
-
-# Disallow API and internal endpoints from indexing
 Disallow: /api/
 Disallow: /tests/
 
-# Sitemap location
+# Generative AI & Answer Engine Crawlers (AEO / GEO Optimization)
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+Disallow: /tests/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Disallow: /tests/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /tests/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/
+Disallow: /tests/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+Disallow: /tests/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /api/
+Disallow: /tests/
+
+User-agent: CCBot
+Allow: /
+Disallow: /api/
+Disallow: /tests/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /api/
+Disallow: /tests/
+
+# Canonical Sitemap and Host
 Sitemap: https://g8g.media/sitemap.xml
+Host: https://g8g.media

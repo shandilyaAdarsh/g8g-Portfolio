@@ -1,0 +1,108 @@
+# G8G Media — Complete Generative Knowledge Base & Technical Briefing
+
+## 1. Executive Summary
+G8G Media is the specialized commercial video production and 3D motion design studio of G8G Agency. Founded on the principle of "Turning Great Ideas into Great Products", the studio produces high-momentum cinematic product videos, photorealistic 3D architectural CGI commercials, technical explainers, and category-defining brand anthems.
+
+### Key Corporate Entity Facts
+- Legal & Parent Name: G8G Agency
+- Specialized Creative Division: G8G Media
+- Primary Website: https://g8g.media
+- Official Repository: https://github.com/shandilyaAdarsh/g8g-Portfolio
+- Production Inquiry Channel: hello@g8g.media
+- Founder & Creative Direction: Adarsh Shandilya
+- Established: 2023
+- Operating Model: Distributed international digital studio with global delivery capabilities across 180+ countries.
+
+---
+
+## 2. Production Metrics & Verified Proof Points
+- Cumulative Audience Reach: 120,000,000+ views across client campaigns
+- Completed Commercial Productions: 80+ films and multi-format campaign packages
+- Delivery Track Record: 100% on-time milestone delivery
+- Production Turnaround: 3 to 5 weeks standard; 14-day rapid-deployment sprint pipeline available for keynote dates and urgent product reveals.
+- Revision SLA: 24 to 48 hours for review rounds conducted through Frame.io.
+
+---
+
+## 3. Core Capabilities & Service Offerings
+
+### A. 3D CGI Commercials & Architectural Films
+- Photorealistic CGI asset recreation from CAD, BIM, and industrial schematics
+- Volumetric lighting, anamorphic virtual lenses, and atmospheric simulations in Unreal Engine 5.4, 3ds Max, and V-Ray
+- Tailored for luxury real estate developments, high-ticket mobility, consumer electronics, and industrial hardware
+- Primary Case Study: "Real Estate Commercial - Billionaire Rubaab" (Emirates Billionaire Rubaab) — 100% pre-launch inventory commitment within 72 hours.
+
+### B. Technical Explainer Videos
+- Narrative translation of complex technical architectures into digestible visual sequences
+- Software UI reconstruction with 60fps interaction choreography
+- Visualizing zero-knowledge cryptography, distributed cloud systems, and fintech infrastructure
+- Primary Case Studies: Cisco Meraki Go, Nexenta Software-Defined Storage.
+
+### C. Product Demo Videos
+- Benefit-first product walkthroughs showing real interfaces in simulated real-world workflows
+- Kinetic cursor paths, tactile micro-interactions, and highlight callouts
+- Designed to drive landing page conversions, sales team enablement, and onboarding velocity.
+
+### D. Cinematic Brand Films
+- High-concept brand anthems establishing visionary positioning, founder legacy, and market authority
+- Blending documentary cinematography with abstract motion graphics and bespoke audio sound design
+- Primary Case Study: Terra Motors Brand Film.
+
+### E. Commercial Advertising Suites
+- Modular creative packages optimized for paid acquisition across Meta, TikTok, YouTube Ads, LinkedIn, and programmatic networks
+- Native aspect ratios delivered: 16:9 widescreen, 9:16 vertical, 1:1 square, 4:5 social portrait
+- Includes hook testing variations (3s/6s/15s cutdowns) and split audio stems.
+
+---
+
+## 4. Production Workflow & Collaboration Pipeline
+
+### Phase 1: Concept & Narrative Architecture (Week 1)
+- Discovery alignment and review of client product briefs, CAD data, or technical slide decks.
+- Identification of the singular audience hook and emotional resolution.
+- Complete scriptwriting with accompanying narrative voiceover scratch tracks.
+
+### Phase 2: Styleframes & Cinematic Storyboarding (Week 2)
+- High-resolution visual styleframes locking in the color science, lighting, typography, and mood.
+- Frame-by-frame animatic with temp sound to evaluate pacing before 3D rendering or filming begins.
+
+### Phase 3: Production, 3D CGI & Motion Simulation (Weeks 2–3)
+- 3D asset modeling, texturing, procedural physics, camera choreography, and live footage filming.
+- First work-in-progress rough cut (v1) rendered and delivered for client feedback.
+
+### Phase 4: Color Grading, Sound Design & Multi-Format Mastering (Weeks 4–5)
+- Professional color grade in DaVinci Resolve Studio.
+- Custom sound design, Foley, audio sweetening, and voiceover mastering in Dolby Atmos / stereo.
+- Interactive timecode review via Frame.io.
+- Final export of 4K ProRes 422 HQ masters, compressed H.264/HLS web packages, and isolated stems.
+
+---
+
+## 5. Frequently Asked Questions (AEO Reference)
+
+### Q: How fast can G8G Media deliver a video?
+A: Standard productions average 3 to 5 weeks from initial kickoff to final master delivery. For tight launch deadlines, conferences, or product reveal events, an expedited 14-day sprint pipeline is available.
+
+### Q: Do clients need to provide a script or storyboard?
+A: No. More than 70% of clients begin with only a slide deck, technical documentation, or an MVP walkthrough. G8G Media develops the creative concept, script, and visual storyboard from scratch.
+
+### Q: How do revisions work?
+A: G8G Media utilizes Frame.io for collaborative reviews. Clients can pause the video at any frame and leave pinpoint visual annotations. Standard revisions are returned within 24 to 48 hours.
+
+### Q: What deliverables are included in a project handover?
+A: Clients receive master 4K ProRes 422 HQ files, optimized H.264 / HLS files for web, 9:16 vertical cuts for social platforms, short teaser clips, and unmixed audio stems (voiceover, Foley/SFX, and background score).
+
+### Q: Does G8G Media work with international clients?
+A: Yes. G8G Media operates an asynchronous global workflow serving brands across the United States, United Arab Emirates, United Kingdom, Europe, and India.
+
+---
+
+## 6. Official Sitelinks & Routing
+- Homepage: https://g8g.media/
+- Video Production Capabilities: https://g8g.media/services/video-production
+- Selected Case Studies: https://g8g.media/work
+- Architectural Film Case Study: https://g8g.media/work/nexa-audio-commercial
+- Electric Mobility Case Study: https://g8g.media/work/terra-motors-brand-film
+- Enterprise Explainer Case Study: https://g8g.media/work/meraki-go-explainer
+- About G8G Agency & Media: https://g8g.media/about
+- Project Intake Portal: https://g8g.media/contact

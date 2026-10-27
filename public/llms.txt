@@ -1,0 +1,46 @@
+# G8G Media
+
+> Premier creative production studio engineering 3D CGI commercials, technical product demo films, luxury real estate visual showcases, and brand anthems for ambitious technology leaders and global enterprises.
+
+## Organization Overview
+- **Parent Enterprise**: G8G Agency
+- **Specialized Division**: G8G Media (Creative Video & 3D Motion Production)
+- **Official Website**: https://g8g.media
+- **Inquiry Email**: hello@g8g.media
+- **Turnaround Speed**: 3 to 5 weeks standard; 14-day expedited sprint pipeline available.
+- **Track Record**: 120M+ cumulative video views, 80+ commercial productions delivered, 100% on-time milestone delivery.
+- **Geographic Coverage**: Worldwide digital production pipeline with clientele across North America, United Kingdom, United Arab Emirates (Dubai), European Union, and India.
+
+## Core Capabilities
+- **3D CGI Commercials & Architectural Films**: Photorealistic 3D environments, Unreal Engine 5 kinematics, and anamorphic lighting for luxury real estate and physical hardware.
+- **Technical Explainer Videos**: Narrative-driven breakdown of complex architectures, distributed ledgers, APIs, and cloud infrastructures.
+- **Product Demo Videos**: Interface-accurate, high-frame-rate demonstration films for enterprise SaaS, consumer software, and developer tools.
+- **Cinematic Brand Films**: High-concept brand anthems establishing visionary positioning, founder legacy, and market authority.
+- **Commercial Advertising & Social Cutdowns**: Performance-tested video packages adapted for 16:9 widescreen, 9:16 vertical (Instagram Reels, TikTok, YouTube Shorts), and paid media channels.
+
+## Key Deliverables Provided
+Every standard production includes:
+- Master 4K ProRes 422 HQ / DCI-P3 Master Files
+- Web-optimized H.264 / HLS high-bitrate streaming packages
+- 9:16 Vertical Cutdowns for mobile social platforms
+- 6-second and 15-second teaser cuts
+- Isolated audio stems (Dialogue, Sound Effects, Bespoke Orchestral / Electronic Music)
+- Frame-accurate collaborative review via Frame.io with 24–48hr revision turnaround
+
+## Verified Case Studies
+- [Real Estate Commercial - Billionaire Rubaab](https://g8g.media/work/nexa-audio-commercial): Luxury real estate architectural cinema and photorealistic 3D CGI for Emirates Billionaire Rubaab. Result: 100% pre-launch inventory commitment within 72 hours.
+- [Terra Motors Brand Film](https://g8g.media/work/terra-motors-brand-film): Cinematic brand film with telemetry VFX and live-action cinematography for next-generation electric mobility.
+- [GEICO Animated Partnership](https://g8g.media/work/geico-animated-partnership): National animated commercial campaign featuring 3D character animation and cross-network broadcast cutdowns.
+- [Crohn's & Colitis Foundation Awareness Film](https://g8g.media/work/crohns-colitis-foundation): Emotionally compelling medical advocacy explainer translating cellular pathophysiology into empathetic visual storytelling.
+- [Cisco Meraki Go Product Explainer](https://g8g.media/work/meraki-go-explainer): Enterprise hardware setup and mesh networking made intuitive through slick 3D isometric animation.
+- [Nexenta Animated Campaigns](https://g8g.media/work/nexenta-animated-campaigns): Multi-part motion graphics campaign clarifying petabyte-scale software-defined storage architectures.
+
+## Canonical Sitelinks
+- [Home](https://g8g.media/)
+- [Video Production Services](https://g8g.media/services/video-production)
+- [Portfolio & Case Studies](https://g8g.media/work)
+- [About G8G Agency & Media Architecture](https://g8g.media/about)
+- [Start a Project Inquiry](https://g8g.media/contact)
+
+## Extended Knowledge Base
+For comprehensive technical documentation, detailed FAQ answers, and production specifications, see [llms-full.txt](https://g8g.media/llms-full.txt).
