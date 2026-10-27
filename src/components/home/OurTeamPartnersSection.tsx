@@ -37,13 +37,15 @@ export function OurTeamPartnersSection() {
     },
     {
       type: 'image' as const,
-      src: '/images/showcase/nexa-media.png',
-      alt: 'Camera lighting set on studio shoot',
+      src: 'https://image.mux.com/MP3DuFGuhTlLI8MyK8rHEzpb9evbHHMnGQTgxgSOJcE/thumbnail.webp?time=6&width=960&height=540&fit_mode=smartcrop',
+      alt: 'Real Estate Commercial - Billionaire Rubaab video master',
+      showPlayIcon: true,
     },
     {
       type: 'image' as const,
-      src: '/images/showcase/asgct-doctor.png',
-      alt: 'Collaborative client creative review',
+      src: '/images/showcase/crohns-media.png',
+      alt: 'American Society of Gene & Cell Therapy animation master',
+      showPlayIcon: true,
     },
     {
       type: 'image' as const,

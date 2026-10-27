@@ -92,7 +92,11 @@ export const projects: Project[] = [
     statusLabel: 'Commercial Master · 4K',
     featured: true,
     playbackId: 'MP3DuFGuhTlLI8MyK8rHEzpb9evbHHMnGQTgxgSOJcE',
-    thumbnail: 'https://image.mux.com/MP3DuFGuhTlLI8MyK8rHEzpb9evbHHMnGQTgxgSOJcE/thumbnail.webp?width=1920&height=1080&fit_mode=smartcrop',
+    thumbnail: 'https://image.mux.com/MP3DuFGuhTlLI8MyK8rHEzpb9evbHHMnGQTgxgSOJcE/thumbnail.webp?time=2&width=1920&height=1080&fit_mode=smartcrop',
+    thumbnails: [
+      'https://image.mux.com/MP3DuFGuhTlLI8MyK8rHEzpb9evbHHMnGQTgxgSOJcE/thumbnail.webp?time=18&width=960&height=540&fit_mode=smartcrop',
+      'https://image.mux.com/MP3DuFGuhTlLI8MyK8rHEzpb9evbHHMnGQTgxgSOJcE/thumbnail.webp?time=9&width=960&height=540&fit_mode=smartcrop',
+    ],
     videoUrl: 'https://stream.mux.com/MP3DuFGuhTlLI8MyK8rHEzpb9evbHHMnGQTgxgSOJcE.m3u8',
     previewStartTimes: [18, 9] as [number, number],
     aspect: '16/9',
@@ -272,7 +276,7 @@ export const projects: Project[] = [
     status: 'published',
     statusLabel: 'Healthcare Series · 4K',
     featured: true,
-    thumbnail: '/images/showcase/asgct-doctor.png',
+    thumbnail: '/images/showcase/crohns-media.png',
     videoLoop: '/videos/showcase/loop-07.mp4',
     videoUrl: '/videos/showcase/loop-07.mp4',
     videoLoops: [
@@ -280,8 +284,8 @@ export const projects: Project[] = [
       '/videos/showcase/loop-12.mp4',
     ],
     thumbnails: [
-      '/images/showcase/asgct-green-grid.png',
-      '/images/showcase/asgct-brain.png',
+      '/images/showcase/crohns-media.png',
+      '/images/showcase/crohns-main.png',
     ],
     aspect: '16/9',
     format: 'Empathetic Live Action & Medical Explainer',

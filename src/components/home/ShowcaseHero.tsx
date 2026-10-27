@@ -138,6 +138,7 @@ export function ShowcaseHero() {
               {/* Interactive Mux 4K Video Player with Hover Controls & Fullscreen */}
               <VideoPlayer
                 playbackId="lnhJ3HkEx00ppw8y9cXOaIRTQ0101RDsjzupOP13nqMnWw"
+                poster="https://image.mux.com/lnhJ3HkEx00ppw8y9cXOaIRTQ0101RDsjzupOP13nqMnWw/thumbnail.webp?time=1&width=1920&height=1080&fit_mode=smartcrop"
                 title="G8G Media · Creative Showcase Reel"
                 aspect="16/9"
                 autoPlay={true}
@@ -183,6 +184,7 @@ export function ShowcaseHero() {
               <div className="relative aspect-video w-full bg-black flex items-center justify-center">
                 <VideoPlayer
                   playbackId="lnhJ3HkEx00ppw8y9cXOaIRTQ0101RDsjzupOP13nqMnWw"
+                  poster="https://image.mux.com/lnhJ3HkEx00ppw8y9cXOaIRTQ0101RDsjzupOP13nqMnWw/thumbnail.webp?time=1&width=1920&height=1080&fit_mode=smartcrop"
                   title="G8G Media Master Reel 4K"
                   aspect="16/9"
                   autoPlay={true}

@@ -66,7 +66,7 @@ const projectEnhancements: Record<string, ProjectEnhancement> = {
   'crohns-colitis-foundation': {
     elaboratedDescription:
       'Complex cellular gene therapy breakthroughs were previously impenetrable to patients, advocates, and medical donors alike. We constructed a 3D molecular explainer translating intricate DNA delivery mechanisms into clear, humane visual metaphors adopted globally as core patient curriculum.',
-    featurePreviewImage: '/images/showcase/asgct-brain.png',
+    featurePreviewImage: '/images/showcase/crohns-media.png',
     featurePreviewLabel: '3D Cellular Molecular VFX',
     featuresUsed: [
       '3D Molecular Cellular VFX',
@@ -246,7 +246,7 @@ function MuxTimedPreview({
         ref={videoRef}
         muted
         playsInline
-        preload="none"
+        preload="metadata"
         poster={poster}
         className={className || 'w-full h-full object-cover'}
         aria-label={alt || 'Video preview'}
@@ -272,12 +272,14 @@ function MediaPreview({
   alt?: string
   className?: string
 }) {
+  const resolvedPoster = poster || fallbackSrc
+
   if (playbackId) {
     return (
       <MuxTimedPreview
         playbackId={playbackId}
         segment={segment}
-        poster={poster}
+        poster={resolvedPoster}
         alt={alt}
         className={className}
       />
@@ -291,14 +293,15 @@ function MediaPreview({
         loop
         muted
         playsInline
-        poster={poster || fallbackSrc}
+        preload="metadata"
+        poster={resolvedPoster}
         className={className || 'w-full h-full object-cover'}
       />
     )
   }
   return (
     <img
-      src={fallbackSrc || poster || ''}
+      src={resolvedPoster || ''}
       alt={alt || ''}
       className={className || 'w-full h-full object-cover'}
       loading="lazy"
@@ -442,8 +445,8 @@ function ProjectRow({
   const pid = project.playbackId
 
   const posterImage = pid
-    ? `https://image.mux.com/${pid}/thumbnail.webp?width=1280&height=720&fit_mode=smartcrop`
-    : project.thumbnail || '/images/showcase/type-of-work-eyz.png'
+    ? `https://image.mux.com/${pid}/thumbnail.webp?time=${project.previewStartTimes?.[0] || 2}&width=1280&height=720&fit_mode=smartcrop`
+    : project.thumbnail
 
   const fallbackTop = project.thumbnails?.[0] || project.thumbnail
   const fallbackBottom = project.thumbnails?.[1] || project.thumbnail

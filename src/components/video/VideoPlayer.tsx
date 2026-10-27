@@ -90,10 +90,10 @@ export function VideoPlayer({
 
   // Resolve poster URL: prioritize explicit poster, or real Mux video frame thumbnail if playbackId is set
   const resolvedPoster =
-    poster !== undefined
-      ? (poster === '' ? undefined : poster)
+    poster !== undefined && poster !== ''
+      ? poster
       : playbackId
-      ? `https://image.mux.com/${playbackId}/thumbnail.webp?width=1920&height=1080&fit_mode=smartcrop`
+      ? `https://image.mux.com/${playbackId}/thumbnail.webp?time=2&width=1920&height=1080&fit_mode=smartcrop`
       : undefined
 
   const isVideo = Boolean(
@@ -618,9 +618,9 @@ export function VideoPlayer({
               isFullscreen ? 'object-contain max-h-screen' : 'object-cover',
             )}
           />
-        ) : resolvedSrc || resolvedPoster ? (
+        ) : resolvedPoster || (!isVideo && resolvedSrc) ? (
           <img
-            src={resolvedSrc || resolvedPoster}
+            src={resolvedPoster || resolvedSrc}
             alt={title}
             className={clsx(
               'w-full h-full',
