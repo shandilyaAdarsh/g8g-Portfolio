@@ -1,0 +1,40 @@
+{
+  "name": "g8g-portfolio",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": ".\\node_modules\\.bin\\next dev",
+    "build": ".\\node_modules\\.bin\\next build",
+    "start": ".\\node_modules\\.bin\\next start",
+    "typecheck": ".\\node_modules\\.bin\\tsc --noEmit",
+    "test:contact": ".\\node_modules\\.bin\\tsx tests/runContactTests.js",
+    "test:seo": ".\\node_modules\\.bin\\tsx tests/runSeoTests.js",
+    "test": "npm run test:contact && npm run test:seo"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.9.2",
+    "@sanity/client": "^6.28.2",
+    "@sanity/image-url": "^1.1.0",
+    "clsx": "^2.1.1",
+    "gsap": "^3.12.7",
+    "hls.js": "^1.7.3",
+    "lucide-react": "^0.468.0",
+    "motion": "^12.5.0",
+    "next": "^15.2.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.90.0",
+    "xlsx": "^0.18.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.23.15",
+    "typescript": "^5.7.0"
+  }
+}

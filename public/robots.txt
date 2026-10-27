@@ -1,0 +1,12 @@
+# G8G Media Robots Configuration
+# https://g8g.media
+
+User-agent: *
+Allow: /
+
+# Disallow API and internal endpoints from indexing
+Disallow: /api/
+Disallow: /tests/
+
+# Sitemap location
+Sitemap: https://g8g.media/sitemap.xml
