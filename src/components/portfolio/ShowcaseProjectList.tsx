@@ -28,7 +28,7 @@ interface ProjectEnhancement {
 const projectEnhancements: Record<string, ProjectEnhancement> = {
   'nexa-audio-commercial': {
     elaboratedDescription:
-      'Ultra-luxury architectural marvels and visionary skylines demand more than standard walk-throughs—they require high-emotion cinema. We directed an immersive launch commercial for Emirates Billionaire Rubaab, fusing photorealistic 3D architectural CGI, golden-hour anamorphic cinematography, and a bespoke spatial score to unveil an iconic development that drove sold-out pre-launch allocations.',
+      'A cinematic architectural film combining photorealistic CGI, dramatic lighting and immersive visual storytelling.',
     featurePreviewImage:
       'https://image.mux.com/MP3DuFGuhTlLI8MyK8rHEzpb9evbHHMnGQTgxgSOJcE/thumbnail.webp?time=12&width=960&height=540&fit_mode=smartcrop',
     featurePreviewLabel: 'Billionaire Rubaab Identity',
@@ -36,66 +36,60 @@ const projectEnhancements: Record<string, ProjectEnhancement> = {
       'Photoreal 3D Architectural CGI',
       'Anamorphic Skyline Cinematography',
       'Bespoke Orchestral Soundscape',
-      'Biometric UI & Telemetry Tracking',
     ],
   },
   'terra-motors-brand-film': {
     elaboratedDescription:
-      'Commercial electric mobility needed an authentic cinematic narrative beyond sterile specifications and generic corporate tropes. We captured a dawn-to-dusk Nordic cinema journey on anamorphic glass, merging raw torque cinematography with live telemetry VFX to debut the flagship fleet at the global energy summit.',
+      'A cinematic electric-mobility film combining live-action imagery with telemetry-inspired visual effects.',
     featurePreviewImage: '/images/showcase/terra-media.png',
     featurePreviewLabel: 'Anamorphic Fleet Telemetry',
     featuresUsed: [
       'Anamorphic Cinema Primes',
       'In-Camera Telemetry Tracking',
-      'Dawn-to-Dusk Nordic Lighting',
       'Spatial EV Powertrain SFX',
     ],
   },
   'geico-animated-partnership': {
     elaboratedDescription:
-      'Traditional policy messaging required an energetic, high-recall twist to captivate younger digital demographics across fast-scrolling feeds. We engineered a dynamic 2D/3D character animation campaign pairing beloved brand nostalgia with fast-paced digital humor and tailored multi-channel cutdowns.',
+      'A character-led animation concept combining stylised visuals, motion and humour for advertising.',
     featurePreviewImage: '/images/showcase/geico-media.png',
     featurePreviewLabel: '2D/3D Cel Shading VFX',
     featuresUsed: [
       'Frame-by-Frame Character Rigging',
       '2D/3D Cel Shading Compositing',
-      'Dynamic Audio Stems & Foley',
-      'Multi-Format 9:16 & 16:9 Cuts',
+      'Multi-Format Cutdowns',
     ],
   },
   'crohns-colitis-foundation': {
     elaboratedDescription:
-      'Complex cellular gene therapy breakthroughs were previously impenetrable to patients, advocates, and medical donors alike. We constructed a 3D molecular explainer translating intricate DNA delivery mechanisms into clear, humane visual metaphors adopted globally as core patient curriculum.',
+      'A 3D visualisation concept designed to make complex cellular and gene-therapy processes easier to understand.',
     featurePreviewImage: '/images/showcase/crohns-media.png',
     featurePreviewLabel: '3D Cellular Molecular VFX',
     featuresUsed: [
       '3D Molecular Cellular VFX',
       'Peer-Reviewed Visual Metaphors',
       'Precision Medical Shading',
-      'Broadcast Voiceover Mastering',
     ],
   },
   'meraki-go-explainer': {
     elaboratedDescription:
-      'Small business owners frequently found enterprise-grade cloud networking hardware intimidating to self-install and deploy. We created a fast-paced mixed-media onboarding film illustrating a frictionless 5-minute unbox-to-cloud setup that significantly reduced customer onboarding friction.',
-    featurePreviewImage: '/images/showcase/meraki-media.png',
-    featurePreviewLabel: 'Mixed-Media UI Compositing',
+      'A mixed-media explainer combining hardware footage and interface animation to communicate a networking setup workflow.',
+    featurePreviewImage: '/images/showcase/thumb-loop-10.png',
+    featurePreviewLabel: 'Product Motion Animation',
     featuresUsed: [
-      'Macro Live-Action Hardware Film',
-      'UI Workflow Screen Tracking',
-      '5-Minute Setup Sequence Design',
-      'Platform Cutdowns (16:9 & 9:16)',
+      'Macro Hardware Cinematography',
+      'UI Screen Motion Tracking',
+      'Frictionless Setup Design',
     ],
   },
   'nexenta-animated-campaigns': {
     elaboratedDescription:
-      'Enterprise software-defined storage felt abstract and invisible to enterprise IT directors and infrastructure buyers. We developed kinetic typography and glowing data-stream animations driving home petabyte resilience and high-throughput velocity across high-performing B2B ad campaigns.',
+      'Animated typography and data-inspired visuals designed to communicate software-defined storage concepts.',
     featurePreviewImage: '/images/showcase/nexenta-media.png',
     featurePreviewLabel: 'Kinetic Neon Typography',
     featuresUsed: [
-      'Kinetic Neon Data Typography',
-      'Enterprise Storage Particle FX',
-      'High-CTR Ad Variant Engineering',
+      'Kinetic Data Typography',
+      'Isometric Storage 3D',
       'Custom Electronic Sound Design',
     ],
   },
@@ -293,7 +287,7 @@ function MediaPreview({
         loop
         muted
         playsInline
-        preload="metadata"
+        preload="auto"
         poster={resolvedPoster}
         className={className || 'w-full h-full object-cover'}
       />
@@ -514,7 +508,7 @@ function ProjectRow({
                 loop={true}
                 muted={true}
                 caseStudyUrl={`/work/${project.slug}`}
-                caseStudyLabel="Case Study"
+                caseStudyLabel="View Case Study"
                 badgeLabel={project.format || '4K MASTER'}
                 className="w-full h-full rounded-2xl sm:rounded-3xl border-none shadow-none"
               />
@@ -535,10 +529,10 @@ function ProjectRow({
             <BackgroundG8GLogoWatermark />
           </div>
 
-          {/* BLUE AREA (Elaborated Text) + Staggered 2-Preview-Screen Column (6 cols) */}
+          {/* Project Details + Staggered 2-Preview-Screen Column (6 cols) */}
           <div className={`lg:col-span-6 flex flex-col relative z-10 ${isMediaLeft ? 'lg:order-2' : 'lg:order-1'}`}>
 
-            {/* BLUE AREA: Eyebrow with category, dot, and format */}
+            {/* Service Category Eyebrow */}
             <div className="flex items-center gap-2 mb-2.5">
               <span
                 className="h-2 w-2 rounded-full"
@@ -548,64 +542,29 @@ function ProjectRow({
                 className="font-display text-[11px] sm:text-xs font-bold uppercase tracking-[0.16em]"
                 style={{ color: eyebrowColor }}
               >
-                {project.eyebrow || project.categoryLabel}
+                {project.categoryLabel}
               </p>
-              <span className="text-neutral-300">·</span>
-              <span className="font-mono text-[10px] sm:text-[11px] text-neutral-500 uppercase tracking-wider">
-                {project.format || '4K Cinema Master'}
-              </span>
             </div>
 
             {/* Project Title */}
             <h2
               id={`project-title-${project.slug}`}
-              className="font-display text-2xl sm:text-3xl lg:text-[2.25rem] xl:text-[2.45rem] font-extrabold text-[#111111] leading-[1.08] tracking-tight mb-3"
+              className="font-display text-2xl sm:text-3xl lg:text-[2.25rem] xl:text-[2.45rem] font-extrabold text-[#111111] leading-[1.1] tracking-tight mb-3"
             >
               <Link href={`/work/${project.slug}`} className="hover:text-neutral-700 transition-colors">
                 {project.title}
               </Link>
             </h2>
 
-            {/* Elaborated Text Narrative filling the section appropriately */}
-            <p className="text-[#52525B] text-xs sm:text-sm md:text-[14px] leading-relaxed mb-4 font-normal">
+            {/* One Concise Description */}
+            <p className="text-[#52525B] text-sm md:text-[15px] leading-relaxed mb-5 font-normal">
               {enhancement.elaboratedDescription}
             </p>
 
-            {/* Micro-Brief Highlights: Problem, Solution, and Outcome Metric */}
-            <div className="mb-4 p-3.5 rounded-xl bg-neutral-50/90 border border-neutral-200/70 space-y-2 text-xs">
-              <div className="flex items-start gap-2">
-                <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-neutral-500 shrink-0 w-16">
-                  Problem:
-                </span>
-                <span className="text-neutral-700 leading-snug">
-                  {project.problem || project.challenge}
-                </span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-neutral-500 shrink-0 w-16">
-                  Made:
-                </span>
-                <span className="text-neutral-700 leading-snug">
-                  {project.whatWeMade || project.solution}
-                </span>
-              </div>
-              <div className="flex items-center justify-between pt-1.5 border-t border-neutral-200/50">
-                <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-neutral-500">
-                  Verified Result:
-                </span>
-                <span
-                  className="font-mono text-[11px] font-bold px-2 py-0.5 rounded-md"
-                  style={{ backgroundColor: `${eyebrowColor}15`, color: eyebrowColor }}
-                >
-                  {project.result || '[EDITABLE: Verified Impact]'}
-                </span>
-              </div>
-            </div>
-
-            {/* Project Card Micro-Tags & Learn More Button */}
+            {/* Accurate Project Tags & View Case Study CTA */}
             <div className="flex flex-wrap items-center justify-between gap-3 mb-6 sm:mb-7">
               <div className="flex flex-wrap items-center gap-1.5">
-                {['4K Master', 'Direction & CGI', 'Sound Design'].map((tag) => (
+                {(project.tags || ['4K Master', 'CGI Animation', 'Sound Design']).slice(0, 3).map((tag) => (
                   <span
                     key={tag}
                     className="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800 border border-neutral-200/70"
@@ -619,7 +578,7 @@ function ProjectRow({
                 href={`/work/${project.slug}`}
                 className="inline-flex items-center justify-center bg-[#111111] text-white hover:bg-neutral-800 active:scale-95 px-5 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 whitespace-nowrap self-start shrink-0 shadow-2xs group"
               >
-                <span>Learn More</span>
+                <span>View Case Study</span>
                 <ArrowRight size={13} className="ml-1.5 transition-transform duration-200 group-hover:translate-x-0.5" />
               </Link>
             </div>

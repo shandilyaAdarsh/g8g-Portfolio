@@ -1,37 +1,16 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk, Inter, Instrument_Serif } from 'next/font/google'
 import '@/styles/index.css'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-space-grotesk',
-})
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ['latin'],
-  weight: '400',
-  style: ['normal', 'italic'],
-  display: 'swap',
-  variable: '--font-instrument-serif',
-})
-
 export const metadata: Metadata = {
   metadataBase: new URL('https://g8g.media'),
   title: {
-    default: 'G8G Media | 3D Motion, Commercial Films & Product Video Studio',
+    default: 'G8G Media | Product Films, 3D Animation & Video Production',
     template: '%s | G8G Media',
   },
   description:
-    'G8G Media is a premier creative production studio engineering 3D CGI commercials, technical product demo films, luxury real estate visuals, and category-defining brand films.',
+    'G8G Media creates cinematic product films, 3D CGI animation, commercials and explainer videos for brands looking to communicate ideas through visual storytelling.',
   keywords: [
     '3D animation studio',
     'commercial video production',
@@ -70,9 +49,9 @@ export const metadata: Metadata = {
     alternateLocale: ['en_GB', 'en_AE', 'en_IN'],
     url: 'https://g8g.media',
     siteName: 'G8G Media',
-    title: 'G8G Media | 3D Motion, Commercial Films & Product Video Studio',
+    title: 'G8G Media | Product Films, 3D Animation & Video Production',
     description:
-      'G8G Media creates product videos, 3D CGI commercials, luxury real estate visuals, and cinematic brand films that make products impossible to ignore.',
+      'G8G Media creates cinematic product films, 3D CGI animation, commercials and explainer videos for brands looking to communicate ideas through visual storytelling.',
     images: [
       {
         url: '/g8g-media-logo.png',
@@ -87,9 +66,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@g8gmedia',
     creator: '@g8gmedia',
-    title: 'G8G Media | 3D Motion, Commercial Films & Product Video Studio',
+    title: 'G8G Media | Product Films, 3D Animation & Video Production',
     description:
-      'G8G Media creates product videos, 3D CGI commercials, luxury real estate visuals, and cinematic brand films that make products impossible to ignore.',
+      'G8G Media creates cinematic product films, 3D CGI animation, commercials and explainer videos for brands looking to communicate ideas through visual storytelling.',
     images: ['/g8g-media-logo.png'],
   },
   robots: {
@@ -111,6 +90,9 @@ export const metadata: Metadata = {
     shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
+  verification: {
+    google: 'google7327da03ee3a5026',
+  },
   other: {
     'geo.region': 'GLOBAL',
     'geo.placename': 'Worldwide',
@@ -127,8 +109,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${instrumentSerif.variable}`}>
+    <html lang="en">
       <head>
+        {/* Google Fonts Preconnect and Stylesheet */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
         {/* Preconnect & DNS-Prefetch for Mux Video and Image CDN */}
         <link rel="preconnect" href="https://image.mux.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://stream.mux.com" crossOrigin="anonymous" />

@@ -32,12 +32,12 @@ export function OurStudioSection() {
 
               {/* Headline */}
               <h2 className="font-display text-2xl sm:text-3xl lg:text-[2.35rem] font-extrabold text-[#111111] leading-[1.08] tracking-tight mb-4">
-                We Don&apos;t Make &ldquo;Content&rdquo;.<br />We Build Visual Equity.
+                We Make Ideas Visible.
               </h2>
 
               {/* Body paragraph */}
               <p className="text-[#111111]/85 text-xs sm:text-sm md:text-[14px] leading-relaxed mb-6 font-normal max-w-md">
-                Attention is the rarest currency in digital media. While competitors churn out forgettable templates, cinema-grade visual storytelling establishes immediate category leadership. G8G operates as an elite, nimble production unit: award-winning directors, senior 3D artists, and sound designers with zero agency overhead.
+                G8G Media combines visual storytelling and production craft to help brands communicate products, technology and ideas with clarity and impact.
               </p>
 
               {/* Pill Button */}
@@ -68,38 +68,38 @@ export function OurStudioSection() {
             </div>
           </div>
 
-          {/* Key Performance Stats Bar */}
+          {/* Factual Core Service Strip */}
           <div className="mt-8 pt-8 border-t border-[#111111]/15 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[1300px] ml-auto">
             <div>
-              <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#111111] tracking-tight">
-                120M+
+              <div className="font-display text-lg sm:text-xl lg:text-2xl font-extrabold text-[#111111] tracking-tight">
+                Product Films
               </div>
               <p className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-[#111111]/75 mt-1 font-semibold">
-                Organic &amp; Paid Views Generated
+                Cinematic Launch Visuals
               </p>
             </div>
             <div>
-              <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#111111] tracking-tight">
-                3.8×
+              <div className="font-display text-lg sm:text-xl lg:text-2xl font-extrabold text-[#111111] tracking-tight">
+                3D CGI &amp; Animation
               </div>
               <p className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-[#111111]/75 mt-1 font-semibold">
-                Average Retention vs Benchmark
+                Photorealistic Visualisation
               </p>
             </div>
             <div>
-              <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#111111] tracking-tight">
-                100%
+              <div className="font-display text-lg sm:text-xl lg:text-2xl font-extrabold text-[#111111] tracking-tight">
+                Commercials
               </div>
               <p className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-[#111111]/75 mt-1 font-semibold">
-                On-Time Rate Across 80+ Commercials
+                Brand &amp; Campaign Films
               </p>
             </div>
             <div>
-              <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#111111] tracking-tight">
-                4K HDR
+              <div className="font-display text-lg sm:text-xl lg:text-2xl font-extrabold text-[#111111] tracking-tight">
+                Explainer Videos
               </div>
               <p className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-[#111111]/75 mt-1 font-semibold">
-                Native Delivery Standard
+                Clear Technical Storytelling
               </p>
             </div>
           </div>

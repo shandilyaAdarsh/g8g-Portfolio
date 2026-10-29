@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "clean": "node -e \"try { require('fs').rmSync('.next', { recursive: true, force: true }); console.log('.next build cache cleared.'); } catch (e) {}\"",
     "typecheck": "tsc --noEmit",
     "test:contact": "tsx tests/runContactTests.js",
     "test:seo": "tsx tests/runSeoTests.js",

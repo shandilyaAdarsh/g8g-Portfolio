@@ -234,21 +234,26 @@ export function BrandsBar() {
             ))}
           </div>
 
-          {/* Authority Trust Metrics Strip */}
-          <div className="mt-8 sm:mt-10 pt-6 border-t border-neutral-200/70 w-full flex flex-wrap items-center justify-center gap-4 sm:gap-8 md:gap-10 text-[11px] sm:text-xs font-mono text-neutral-500">
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]" />
-              <strong className="text-neutral-900 font-semibold">120M+</strong> VIEWS GENERATED
-            </span>
-            <span className="hidden sm:inline text-neutral-300">·</span>
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]" />
-              <strong className="text-neutral-900 font-semibold">80+</strong> COMMERCIAL COMMISSIONS
-            </span>
-            <span className="hidden sm:inline text-neutral-300">·</span>
-            <span className="flex items-center gap-2">
+          {/* Factual Core Service Strip */}
+          <div className="mt-8 sm:mt-10 pt-6 border-t border-neutral-200/70 w-full flex flex-wrap items-center justify-center gap-3 sm:gap-6 md:gap-8 text-[11px] sm:text-xs font-mono text-neutral-500 font-semibold uppercase tracking-wider">
+            <span className="flex items-center gap-2 text-neutral-800">
               <span className="w-1.5 h-1.5 rounded-full bg-[#FF2E79]" />
-              <strong className="text-neutral-900 font-semibold">100%</strong> ON-TIME DELIVERY RATE
+              Product Films
+            </span>
+            <span className="hidden sm:inline text-neutral-300">·</span>
+            <span className="flex items-center gap-2 text-neutral-800">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]" />
+              3D CGI &amp; Animation
+            </span>
+            <span className="hidden sm:inline text-neutral-300">·</span>
+            <span className="flex items-center gap-2 text-neutral-800">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#3B82F6]" />
+              Commercials
+            </span>
+            <span className="hidden sm:inline text-neutral-300">·</span>
+            <span className="flex items-center gap-2 text-neutral-800">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
+              Explainer Videos
             </span>
           </div>
         </div>

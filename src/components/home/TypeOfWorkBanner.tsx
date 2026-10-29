@@ -23,13 +23,13 @@ interface WorkTypeCategory {
 const workTypeCategories: WorkTypeCategory[] = [
   {
     id: 'animation',
-    name: '3D CGI & Motion',
-    tagline: 'Deconstruct the impossible, frame by photorealistic frame.',
+    name: '3D CGI',
+    tagline: 'Product animation and visualisation.',
     ctaText: 'Explore 3D Work',
     href: '/work?category=motion-graphics',
     projectTitle: 'Tech Product Animation & 3D CGI',
     projectDescription:
-      'From microscopic optical sensors to macro exploded CAD assemblies, we build hyper-real 3D worlds that explain complex technical breakthroughs in seconds.',
+      'Photorealistic 3D visuals and dynamic motion design that reveal intricate product engineering, hardware features, and internal mechanics.',
     badgeLabel: '4K CGI BREAKDOWN',
     playbackId: 'u9BqX02dLjNqoAMpiD8x00HJIgzftTI02IODOtlm4jX6wQ',
     poster:
@@ -38,25 +38,25 @@ const workTypeCategories: WorkTypeCategory[] = [
   {
     id: 'live-action',
     name: 'Live Action',
-    tagline: 'Real human emotion captured on anamorphic glass.',
-    ctaText: 'Explore Live Action',
+    tagline: 'Product films and commercials.',
+    ctaText: 'Explore 3D Work',
     href: '/work?category=brand-film',
     projectTitle: 'Cinematic Brand Film',
     projectDescription:
-      'Founder epics, lifestyle narratives, and cinematic commercials captured with deliberate lighting, bespoke location scouting, and authentic performances.',
+      'Cinematic live-action storytelling combining deliberate lighting, authentic performances, and camera direction that connect on a human level.',
     badgeLabel: 'ANAMORPHIC CINEMA',
     videoLoop: '/videos/showcase/loop-19.mp4',
     poster: '/images/showcase/terra-media.png',
   },
   {
     id: 'hybrid',
-    name: 'Hybrid Synthesis',
-    tagline: 'Where tactile reality collides with volumetric CGI.',
-    ctaText: 'Explore Hybrid Films',
+    name: 'Hybrid',
+    tagline: 'Filmmaking meets CGI and motion.',
+    ctaText: 'Explore 3D Work',
     href: '/work',
     projectTitle: '3D & Live Action Commercial',
     projectDescription:
-      'Physical camera movement fused with particle simulations, spatial sound design, and invisible VFX. The definitive visual format for hardware and future-facing tech.',
+      'Physical cinematography seamlessly fused with photorealistic CGI, simulated physics, and visual effects to bring future-facing products to life.',
     badgeLabel: 'HYBRID VFX COMPOSITE',
     playbackId: 'MP3DuFGuhTlLI8MyK8rHEzpb9evbHHMnGQTgxgSOJcE',
     poster:
@@ -123,12 +123,17 @@ export function TypeOfWorkBanner() {
               </div>
 
               {/* Section Headline */}
-              <h3 className="font-display text-xl sm:text-2xl lg:text-[26px] font-extrabold text-[#111111] leading-tight tracking-tight mb-5">
-                Three Mediums. One Standard: Perfection.
-              </h3>
+              <h2 className="font-display text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#111111] leading-tight tracking-tight mb-3">
+                Three Ways to Bring Ideas to Life.
+              </h2>
+
+              {/* Supporting Copy */}
+              <p className="text-[14px] sm:text-[15px] leading-relaxed text-[#111111]/85 font-normal mb-5 max-w-md">
+                From photorealistic 3D animation to live-action filmmaking, we create visuals that make complex products easier to understand and compelling to watch.
+              </p>
 
               {/* Interactive Category Selector Pills */}
-              <div className="flex flex-wrap gap-2 sm:gap-2.5 mb-6" role="tablist">
+              <div className="flex flex-wrap gap-2 sm:gap-2.5 mb-5" role="tablist">
                 {workTypeCategories.map((cat, idx) => {
                   const isActive = activeTab === idx
                   return (
@@ -137,7 +142,7 @@ export function TypeOfWorkBanner() {
                       role="tab"
                       aria-selected={isActive}
                       onClick={() => setActiveTab(idx)}
-                      className={`font-display text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all duration-200 cursor-pointer ${
+                      className={`font-display text-xs sm:text-sm font-semibold px-4 sm:px-5 py-2 rounded-full transition-all duration-200 cursor-pointer ${
                         isActive
                           ? 'bg-[#111111] text-white shadow-md scale-105'
                           : 'bg-white/80 hover:bg-white text-[#111111] hover:shadow-xs'
@@ -149,21 +154,21 @@ export function TypeOfWorkBanner() {
                 })}
               </div>
 
-              {/* Active Tab Headline in Space Grotesk H2 */}
+              {/* Active Tab Headline & Description */}
               <AnimatePresence mode="wait">
                 <motion.div
                   key={current.id}
-                  initial={{ opacity: 0, y: 8 }}
+                  initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.25 }}
-                  className="space-y-4"
+                  exit={{ opacity: 0, y: -6 }}
+                  transition={{ duration: 0.2 }}
+                  className="space-y-3"
                 >
-                  <h2 className="font-display text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#111111] leading-[1.12] tracking-tight">
+                  <h3 className="font-display text-xl sm:text-2xl font-bold text-[#111111] leading-snug tracking-tight">
                     {current.tagline}
-                  </h2>
+                  </h3>
 
-                  <p className="text-[15px] sm:text-[16px] leading-[1.6] text-[#111111]/85 font-normal">
+                  <p className="text-[14px] sm:text-[15px] leading-relaxed text-[#111111]/80 font-normal">
                     {current.projectDescription}
                   </p>
 
@@ -172,7 +177,7 @@ export function TypeOfWorkBanner() {
                       href={current.href}
                       className="inline-flex items-center gap-2 bg-[#111111] text-white font-display text-xs sm:text-sm font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full hover:bg-neutral-800 active:scale-95 transition-all shadow-sm group"
                     >
-                      <span>{current.ctaText}</span>
+                      <span>Explore 3D Work</span>
                       <ArrowRight
                         size={14}
                         className="transition-transform duration-200 group-hover:translate-x-1"

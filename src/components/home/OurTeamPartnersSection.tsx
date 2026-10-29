@@ -1,34 +1,10 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'motion/react'
-import { ArrowLeft, ArrowRight, Play, Quote } from 'lucide-react'
-
-const testimonials = [
-  {
-    quote:
-      'G8G turned our high-end acoustic specs into a breathtaking visual anthem that made our preorder launch convert at historic highs.',
-    author: '[Client Name] [EDITABLE]',
-    role: 'Creative Director, Audio Tech [EDITABLE]',
-  },
-  {
-    quote:
-      'The raw torque and cinematic lighting they captured for our EV fleet film gave our enterprise launch the prestige of an automotive brand.',
-    author: '[Client Name] [EDITABLE]',
-    role: 'VP of Marketing, Mobility Brand [EDITABLE]',
-  },
-  {
-    quote:
-      'From 3D cellular animation to multi-channel cuts, they made complex science deeply emotional and crystalline clear for our global audience.',
-    author: '[Client Name] [EDITABLE]',
-    role: 'Director of Communications, BioTech Foundation [EDITABLE]',
-  },
-]
+import { Play } from 'lucide-react'
 
 export function OurTeamPartnersSection() {
-  const [currentIdx, setCurrentIdx] = useState(0)
-
   const cards = [
     {
       type: 'image' as const,
@@ -65,105 +41,49 @@ export function OurTeamPartnersSection() {
     },
   ]
 
-  const nextTestimonial = () => {
-    setCurrentIdx((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prevTestimonial = () => {
-    setCurrentIdx((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
-
-  const activeTestimonial = testimonials[currentIdx]
-
   return (
     <section
       className="py-10 sm:py-14 md:py-16 bg-white overflow-hidden"
-      aria-label="Our Team and Client Testimonial"
+      aria-label="The People Behind the Picture"
     >
       {/* Aligned with page container on left, right column bleeds to right edge */}
       <div className="w-full pl-[max(1rem,calc((100vw-1280px)/2+1rem))] sm:pl-[max(1.5rem,calc((100vw-1280px)/2+1.5rem))] lg:pl-[max(2rem,calc((100vw-1280px)/2+2rem))] xl:pl-[max(2rem,calc((100vw-1300px)/2+2rem))] pr-0">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center">
-          {/* Left Column: Our Team Narrative (5 cols, max 3 lines) */}
+          {/* Left Column: Team Narrative */}
           <div className="lg:col-span-5 flex flex-col items-start pr-4 sm:pr-8 lg:pr-4 py-2">
+            <div className="flex items-center gap-2 font-display text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#FF2E79] mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FF2E79] animate-pulse" />
+              <span>THE STUDIO CREW</span>
+            </div>
+
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#111111] tracking-tight mb-5 leading-[1.08]">
-              Our team
+              The People Behind the Picture.
             </h2>
 
-            <div className="space-y-3 text-sm sm:text-[15px] leading-relaxed text-[#52525B] font-normal max-w-lg mb-8">
-              <p>
-                We&apos;re G8G Media—a crew of directors, 3D animators, and cinematographers crafting cinema-grade product films and commercials.
-              </p>
-              <p>
-                We clearly educate your audience by creatively engaging them, transforming ambitious concepts into high-converting visual stories.
-              </p>
-              <p>
-                Work with us, and you&apos;re part of the team too—moving people and brands forward together.
-              </p>
-            </div>
+            <p className="text-sm sm:text-[15px] leading-relaxed text-[#52525B] font-normal max-w-lg mb-8">
+              We bring together creative direction, filmmaking, 3D animation and motion design to turn ideas into compelling visual stories.
+            </p>
 
             {/* Pill CTA button matching original #EE82FB theme color */}
             <Link
               href="/about"
               className="inline-flex items-center justify-center bg-[#EE82FB] text-[#111111] hover:bg-[#EE82FB]/85 active:scale-95 font-semibold text-xs sm:text-sm px-6 sm:px-7 py-3 sm:py-3.5 rounded-full shadow-xs transition-all duration-200"
             >
-              <span>Meet the team</span>
+              <span>Meet the Team</span>
             </Link>
           </div>
 
-          {/* Right Column: Original #EE82FB Card with Client Testimonials & 3x2 Grid (7 cols, bleeding right) */}
+          {/* Right Column: Signature #EE82FB Card with Factual Service Strip & 3x2 Craft Grid */}
           <div className="lg:col-span-7 bg-[#EE82FB] rounded-l-3xl sm:rounded-l-[44px] rounded-r-none p-6 sm:p-10 md:p-12 lg:p-14 pr-6 sm:pr-10 md:pr-14 lg:pr-20 xl:pr-24 border-y border-l border-[#D659E8]/35 shadow-md text-[#111111]">
-            {/* Testimonial Header */}
-            <div className="flex items-center justify-between gap-4 mb-4">
-              <h3 className="font-display text-base sm:text-lg md:text-xl font-bold text-[#111111] leading-snug">
-                A few kind words from our{' '}
-                <Link
-                  href="/services"
-                  className="underline decoration-2 underline-offset-4 decoration-[#111111] hover:opacity-80 transition-opacity font-extrabold"
-                >
-                  friends and clients:
-                </Link>
-              </h3>
-
-              {/* Keyboard accessible carousel controls */}
-              <div className="flex items-center gap-2 shrink-0">
-                <button
-                  type="button"
-                  onClick={prevTestimonial}
-                  aria-label="Previous testimonial"
-                  className="w-8 h-8 rounded-full bg-white/80 hover:bg-white text-[#111111] flex items-center justify-center transition-all hover:scale-105 active:scale-95 shadow-2xs cursor-pointer"
-                >
-                  <ArrowLeft size={13} />
-                </button>
-                <button
-                  type="button"
-                  onClick={nextTestimonial}
-                  aria-label="Next testimonial"
-                  className="w-8 h-8 rounded-full bg-white/80 hover:bg-white text-[#111111] flex items-center justify-center transition-all hover:scale-105 active:scale-95 shadow-2xs cursor-pointer"
-                >
-                  <ArrowRight size={13} />
-                </button>
+            {/* Factual Service Strip Header */}
+            <div className="mb-6">
+              <div className="flex items-center gap-2 font-display text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#111111]/75 mb-2">
+                <span className="w-3 h-[2px] bg-[#111111]" />
+                <span>CORE CRAFT &amp; PRODUCTION</span>
               </div>
-            </div>
-
-            {/* Testimonial Quote Display */}
-            <div className="mb-7 relative" role="region" aria-label="Client Testimonial Quote">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentIdx}
-                  initial={{ opacity: 0, y: 6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -6 }}
-                  transition={{ duration: 0.2 }}
-                  className="space-y-2"
-                >
-                  <blockquote className="font-display text-base sm:text-lg md:text-[19px] font-bold text-[#111111] leading-snug">
-                    &ldquo;{activeTestimonial.quote}&rdquo;
-                  </blockquote>
-                  <p className="font-mono text-xs text-[#111111]/80 font-medium">
-                    {activeTestimonial.author} — <span className="opacity-90">{activeTestimonial.role}</span>
-                  </p>
-                </motion.div>
-              </AnimatePresence>
+              <h3 className="font-display text-base sm:text-lg md:text-xl font-extrabold text-[#111111] leading-snug">
+                Product Films · 3D CGI &amp; Animation · Commercials · Explainer Videos
+              </h3>
             </div>
 
             {/* 3x2 Photo/Preview Grid */}

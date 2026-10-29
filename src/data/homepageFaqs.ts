@@ -5,23 +5,23 @@ export interface FaqItem {
 
 export const HOMEPAGE_FAQS: FaqItem[] = [
   {
-    question: 'How fast can we go from initial brief to final delivery?',
+    question: 'How long does a typical project take?',
     answer:
-      'Standard productions average 3 to 5 weeks. If you have an urgent product launch or keynote date, we offer an expedited 14-day sprint pipeline.',
+      'Production timelines depend on project scope. A standard 3D CGI or live-action production typically spans 2 to 6 weeks from initial kickoff to final delivery.',
   },
   {
-    question: 'Do we need a script or storyboard before reaching out?',
+    question: 'Do we need a finished script before reaching out?',
     answer:
-      'No. Over 70% of our partners come to us with just a technical spec sheet or a slide deck. We handle creative concepting, scriptwriting, and visual storyboarding from scratch.',
+      'No. We collaborate with teams at any stage, whether shaping an idea from scratch or working directly from an existing script and creative brief.',
   },
   {
-    question: 'How do review rounds and revisions work?',
+    question: 'How are review rounds and revisions handled?',
     answer:
-      'We use Frame.io for frame-accurate, timecode-synced feedback. You and your team click directly on the video to leave notes, and revisions are returned within 24–48 hours.',
+      'Structured review milestones are agreed before production begins. Feedback is integrated at defined stages—concept, storyboard, rough cut, and final grade—ensuring smooth, predictable progress.',
   },
   {
-    question: 'What exact deliverables do we receive at completion?',
+    question: 'What deliverables do we receive upon project completion?',
     answer:
-      'Full 4K ProRes 422 HQ masters, compressed web-ready H.264/HLS packages, 9:16 vertical cuts optimized for Instagram/TikTok/YouTube Shorts, 6-second teaser cuts, and isolated audio stems.',
+      'You receive full-resolution 4K master files alongside web-optimised versions and agreed platform-specific cutdowns formatted for your campaign channels.',
   },
 ]

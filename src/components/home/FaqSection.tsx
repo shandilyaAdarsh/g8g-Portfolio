@@ -7,7 +7,6 @@ import { PageContainer } from '../layout/PageContainer'
 import { HOMEPAGE_FAQS, FaqItem } from '@/data/homepageFaqs'
 
 export type { FaqItem }
-export { HOMEPAGE_FAQS }
 
 export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
@@ -31,14 +30,13 @@ export function FaqSection() {
           {/* Heading */}
           <h2
             id="faq-heading"
-            className="font-display text-3xl sm:text-4xl md:text-[44px] font-black text-[#111111] text-center tracking-tight leading-tight mb-4"
+            className="font-display text-3xl sm:text-4xl md:text-[44px] font-black text-[#111111] text-center tracking-tight leading-tight mb-3"
           >
-            Everything you need to know <br className="hidden sm:inline" />
-            before we <span className="font-serif italic font-normal text-[#FF2E79]">roll.</span>
+            Before We Roll.
           </h2>
 
-          <p className="text-[#52525B] text-center text-sm sm:text-base max-w-lg mx-auto mb-10 leading-relaxed">
-            Transparent workflows, defined milestones, and zero hidden surprises from script to screen.
+          <p className="text-[#52525B] text-center text-sm sm:text-base max-w-lg mx-auto mb-10 leading-relaxed font-normal">
+            Clear answers about working with G8G Media, from the first brief to final delivery.
           </p>
 
           {/* Accordion List */}

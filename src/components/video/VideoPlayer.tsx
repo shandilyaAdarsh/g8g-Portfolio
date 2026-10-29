@@ -602,7 +602,7 @@ export function VideoPlayer({
             playsInline
             loop={loop}
             muted={isMuted}
-            preload="metadata"
+            preload="auto"
             onTimeUpdate={handleTimeUpdate}
             onLoadedMetadata={handleLoadedMetadata}
             onPlay={() => setIsPlaying(true)}

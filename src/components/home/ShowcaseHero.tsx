@@ -1,40 +1,23 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence, useReducedMotion } from 'motion/react'
 import { ArrowRight, Play, X } from 'lucide-react'
 import { PageContainer } from '../layout/PageContainer'
 import { VideoPlayer } from '../video/VideoPlayer'
 
-const rotatingWords = [
-  '3D Anthems',
-  'Commercials',
-  'Brand Films',
-  'Launch Visuals',
-]
-
 /**
- * ShowcaseHero – Clean, high-impact hero with rotating kinetic typography:
- * - Headlines: Space Grotesk 72-88px bold with tight tracking
- * - Rotating animated word in Instrument Serif italic pink
- * - Benefit-first subhead
- * - Magnetic interactive buttons with arrow slide
+ * ShowcaseHero – High-impact, cinematic hero:
+ * - Eyebrow: CINEMATIC PRODUCT FILMS · 3D CGI · MOTION DESIGN
+ * - Dominant Headline: We Direct Films That Make Products Impossible to Ignore.
+ * - Clear supporting copy
+ * - Two distinct CTAs: Launch Your Campaign + Watch Studio Reel
  * - Standalone 4K Mux Studio Player on right column
  */
 export function ShowcaseHero() {
   const [showreelOpen, setShowreelOpen] = useState(false)
-  const [wordIndex, setWordIndex] = useState(0)
   const shouldReduceMotion = useReducedMotion()
-
-  // Cycle rotating words every 2.8s
-  useEffect(() => {
-    if (shouldReduceMotion) return
-    const interval = setInterval(() => {
-      setWordIndex((prev) => (prev + 1) % rotatingWords.length)
-    }, 2800)
-    return () => clearInterval(interval)
-  }, [shouldReduceMotion])
 
   return (
     <section
@@ -54,43 +37,28 @@ export function ShowcaseHero() {
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#FF2E79] animate-pulse" />
               <p className="font-display text-[11px] font-bold uppercase tracking-[0.18em] text-[#FF2E79]">
-                CINEMATIC PRODUCT FILMS &amp; 3D MOTION
+                CINEMATIC PRODUCT FILMS · 3D CGI · MOTION DESIGN
               </p>
             </motion.div>
 
-            {/* Headline with Space Grotesk + Rotating Word in Instrument Serif Italic */}
+            {/* Dominant Headline */}
             <motion.h1
               initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
-              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[62px] xl:text-[74px] font-extrabold text-[#111111] leading-[1.04] tracking-tight mb-4"
+              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[62px] xl:text-[72px] font-extrabold text-[#111111] leading-[1.05] tracking-tight mb-5"
             >
-              We Direct Films That Make<br />
-              Products Impossible to Ignore. <span className="inline-block text-[#FF2E79] font-black tracking-[-0.06em] select-none text-[0.85em] align-middle ml-1">///</span><br />
-              <span className="relative inline-block min-w-[200px] sm:min-w-[300px] md:min-w-[380px] h-[1.12em] overflow-hidden align-bottom">
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={rotatingWords[wordIndex]}
-                    initial={shouldReduceMotion ? { opacity: 1 } : { y: '100%', opacity: 0 }}
-                    animate={{ y: '0%', opacity: 1 }}
-                    exit={shouldReduceMotion ? { opacity: 0 } : { y: '-100%', opacity: 0 }}
-                    transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                    className="inline-block font-serif italic text-[#FF2E79] tracking-normal capitalize"
-                  >
-                    {rotatingWords[wordIndex]}
-                  </motion.span>
-                </AnimatePresence>
-              </span>
+              We Direct Films That Make<br className="hidden sm:inline" /> Products Impossible to Ignore.
             </motion.h1>
 
-            {/* Benefit-First Supporting Copy */}
+            {/* Clear Supporting Copy */}
             <motion.p
               initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.32 }}
-              className="text-[15px] sm:text-[16px] md:text-[17px] leading-[1.58] text-[#52525B] max-w-lg mb-6 sm:mb-7 font-normal"
+              className="text-[15px] sm:text-[16px] md:text-[17px] leading-[1.58] text-[#52525B] max-w-lg mb-7 font-normal"
             >
-              We fuse tactile live-action cinema with photorealistic 3D CGI to turn ambitious tech products into category-defining visual anthems.
+              We create cinematic product videos, photorealistic 3D animation and commercials that bring ambitious ideas to life.
             </motion.p>
 
             {/* Interactive Actions: Primary Black Pill + Watch Showreel */}
@@ -112,17 +80,17 @@ export function ShowcaseHero() {
                 />
               </Link>
 
-              {/* Secondary CTA Button: Watch Studio Reel (01:42) */}
+              {/* Secondary CTA Button: Watch Studio Reel */}
               <button
                 type="button"
                 onClick={() => setShowreelOpen(true)}
                 className="inline-flex items-center gap-2.5 font-display text-xs sm:text-sm font-semibold text-[#111111] hover:text-[#FF2E79] transition-colors group cursor-pointer"
-                aria-label="Watch Studio Reel (01:42)"
+                aria-label="Watch Studio Reel"
               >
                 <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FF2E79] text-white flex items-center justify-center transition-transform duration-200 group-hover:scale-110 shadow-xs">
                   <Play size={12} className="fill-white translate-x-0.5" />
                 </span>
-                <span>Watch Studio Reel (01:42)</span>
+                <span>Watch Studio Reel</span>
               </button>
             </motion.div>
           </div>
@@ -144,7 +112,7 @@ export function ShowcaseHero() {
                 autoPlay={true}
                 loop={true}
                 muted={true}
-                badgeLabel="STUDIO SHOWREEL · 4K CINEMA MASTER · 120M+ VIEWS GENERATED"
+                badgeLabel="STUDIO SHOWREEL · 4K CINEMA MASTER"
                 className="w-full shadow-2xl rounded-2xl sm:rounded-3xl border border-neutral-200/60"
               />
             </div>

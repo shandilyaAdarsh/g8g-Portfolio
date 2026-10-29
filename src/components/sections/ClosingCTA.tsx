@@ -21,9 +21,9 @@ interface ClosingCTAProps {
  * - Right: black pill "Start a Project →" button with magnetic hover & arrow slide
  */
 export function ClosingCTA({
-  headline = "Have a Product Worth Talking About? Let's Give It the Film It Deserves.",
-  supportingCopy = 'Tell us about your goals, target launch window, and budget tier. We will return a tailored creative treatment and roadmap within 24 hours.',
-  primaryLabel = 'Start a Project',
+  headline = 'Have a Product Worth Showing?',
+  supportingCopy = "Tell us what you're building. We'll help you explore the right approach to product films, 3D animation or commercial video production.",
+  primaryLabel = 'Start Your Project',
   primaryHref = '/contact',
   secondaryLabel,
   secondaryHref,

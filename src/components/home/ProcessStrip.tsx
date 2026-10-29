@@ -7,43 +7,35 @@ import { PageContainer } from '../layout/PageContainer'
 const flowSteps = [
   {
     step: '01',
-    name: 'Narrative & Scripting',
-    timeline: 'Week 1',
+    name: 'Discover',
     icon: Compass,
-    description:
-      "We dissect your product's core value proposition, audience psychology, and competitive landscape to craft scripts, moodboards, and animatics before cameras roll.",
+    description: 'Define the audience, goals and creative direction.',
   },
   {
     step: '02',
-    name: 'Direction & CGI Build',
-    timeline: 'Weeks 2–3',
+    name: 'Develop',
     icon: FileText,
-    description:
-      'High-end live-action cinematography on cinema sensors alongside sub-millimeter 3D asset texturing, volumetric lighting, and fluid simulation.',
+    description: 'Shape the concept, script and storyboard.',
   },
   {
     step: '03',
-    name: 'Editorial & Spatial Sound',
-    timeline: 'Week 4',
+    name: 'Produce',
     icon: Film,
-    description:
-      'Hollywood-grade color grading, kinetic editorial pacing, and custom Foley/spatial audio that makes every frame visceral.',
+    description: 'Film, animate, edit and refine the visuals.',
   },
   {
     step: '04',
-    name: 'Multi-Channel Master Handoff',
-    timeline: 'Day 28',
+    name: 'Deliver',
     icon: Share2,
-    description:
-      '16:9 Broadcast masters, 9:16 vertical cuts for paid acquisition, 6-second hook cutdowns, and clean audio stems ready for deployment.',
+    description: 'Prepare approved assets in the agreed formats.',
   },
 ]
 
 /**
- * ProcessStrip – Services Flow Banner crafted to the original agency theme:
- * - Playful rounded card layout with soft shadows and organic #EE82FB accents
- * - Flow progression with numbered badges and connecting arrows
- * - One-line benefit-first descriptions
+ * ProcessStrip – Services Flow Banner:
+ * - Heading: "From Brief to Final Cut."
+ * - Supporting copy: "A collaborative process that keeps every project focused on the message, the visuals and the intended audience."
+ * - 4 concise stages: Discover, Develop, Produce, Deliver
  */
 export function ProcessStrip() {
   return (
@@ -60,15 +52,15 @@ export function ProcessStrip() {
             <div>
               <div className="flex items-center gap-2 font-display text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#111111]/75 mb-2">
                 <span className="w-3.5 h-[2px] bg-[#111111]" />
-                <span>THE BLUEPRINT</span>
+                <span>THE PROCESS</span>
               </div>
               <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#111111] tracking-tight leading-tight">
-                Zero Guesswork. From First Brief to 4K Premiere.
+                From Brief to Final Cut.
               </h2>
             </div>
 
             <p className="text-xs sm:text-sm text-[#52525B] max-w-sm leading-relaxed">
-              A frictionless 4-phase production framework built for founders, marketers, and creative leads.
+              A collaborative process that keeps every project focused on the message, the visuals and the intended audience.
             </p>
           </div>
 
@@ -87,7 +79,7 @@ export function ProcessStrip() {
                     {/* Step number badge & icon */}
                     <div className="flex items-center justify-between mb-4">
                       <span className="inline-flex items-center justify-center font-display text-xs font-bold px-2.5 py-1 rounded-full bg-[#EE82FB]/30 text-[#111111] border border-[#EE82FB]">
-                        Phase {item.step} · {item.timeline}
+                        Stage {item.step}
                       </span>
 
                       <div className="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-[#111111] group-hover:bg-[#EE82FB] transition-colors">
